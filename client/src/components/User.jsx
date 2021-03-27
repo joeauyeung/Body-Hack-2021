@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from "react";
 import db from "./config";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+   root: {
+      marginTop: "100px"
+   }
+})
+
 
 function User() {
+    const classes = useStyles();
     const [ users, setUsers ] = useState([]);
     const fetchUsers = async() => {
-        const response= db.collection("users");
+        console.log("Testing");
+        const response = db.collection("users");
         const data = await response.get();
         data.docs.forEach(item => {
             setUsers([ ...users, item.data() ])
@@ -16,6 +26,7 @@ function User() {
 
     return(
         <div>
+            <h1>Users</h1>
             {
                 users && users.map(user => {
                     return (

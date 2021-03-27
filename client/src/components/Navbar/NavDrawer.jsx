@@ -40,12 +40,12 @@ export default function NavDrawer(props) {
         {
             text: "Users",
             icon: <RiDashboardLine/>,
-            link: "/users"
+            link: "/user"
         },
         {
-            text: "Logout",
+            text: "Stories",
             icon: <BiLogOut/>,
-            link: "/"
+            link: "/stories"
         }
     ]
 

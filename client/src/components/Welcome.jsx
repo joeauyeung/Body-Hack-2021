@@ -9,7 +9,7 @@ const useStyles = makeStyles({
 
 function Welcome() {
    const classes = useStyles();
-   return <h1 className={ classes.root }>Welcome!</h1>
+   return <h1 className={ classes.root }>Welcome! (Therapist)</h1>
 }
 
 export default Welcome;
