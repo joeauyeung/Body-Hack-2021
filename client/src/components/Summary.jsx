@@ -26,7 +26,7 @@ export default function Summary() {
         <div className={ classes.root }>
             <Card>
                 <CardContent>
-                    <Typography className={ classes.title } varient="h3" gutterBottom>
+                    <Typography className={ classes.title } varient="h3" color="secondary" gutterBottom>
                         Clients in your caseload
                     </Typography>
                     <Typography className={ classes.number } varient="h5">

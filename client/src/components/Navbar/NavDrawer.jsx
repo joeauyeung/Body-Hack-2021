@@ -38,7 +38,7 @@ export default function NavDrawer(props) {
             link: "/"
         },
         {
-            text: "Users",
+            text: "Patients",
             icon: <RiDashboardLine/>,
             link: "/user"
         },

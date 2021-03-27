@@ -12,7 +12,7 @@ function Welcome() {
    const classes = useStyles();
    return (
       <div className={ classes.root }>
-         <h1>Welcome! (Therapist)</h1>
+         <h1>Welcome!</h1>
          <Summary/>
       </div>
    ) 

@@ -37,14 +37,14 @@ function User() {
     console.log(users);
     return(
         <div className={ classes.root }>
-            <h1>Users</h1>
+            <h1>Patients</h1>
             <TableContainer component={Paper} >
             <Table>
                 <TableHead>
                     <TableRow>
                         <TableCell> Id</TableCell>
                         <TableCell> Name</TableCell>
-                        <TableCell> Learn More</TableCell>
+                        <TableCell> Alerts</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -55,7 +55,7 @@ function User() {
                                 { user.id }
                             </TableCell>
                             <TableCell>{user.name}</TableCell>
-                            <TableCell>See more</TableCell>
+                            <TableCell>{ user.alert }</TableCell>
                         </TableRow>
                         )
                     })}
