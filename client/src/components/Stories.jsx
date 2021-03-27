@@ -19,35 +19,47 @@ function Stories() {
     const classes = useStyles();
     const [ stories, setStories ] = useState([]);
     const fetchStories = async() => {
+        let storyList = [];
         const response= db.collection("recordings/mfBmHBgbpH6ZP7F7YgWv/archives");
         const data = await response.get();
-        console.log(data);
         data.docs.forEach(item => {
-            console.log(item.data());
-            setStories([ ...stories, item.data() ])
+            // console.log(item.data());
+            storyList.push(item.data());
         })
+        setStories(storyList);
     }
     useEffect(() => {
         fetchStories();
+        console.log(stories);
     }, []);
 
     return (
-        <TableContainer component={Paper} className={ classes.root }>
+        <div className={ classes.root }>
+        <h1>Your Entries</h1>
+        <TableContainer component={Paper} >
             <Table>
                 <TableHead>
                     <TableRow>
-                        <TableCell> Testing (Log of individual's story)</TableCell>
+                        <TableCell> Id</TableCell>
+                        <TableCell> Uploaded At</TableCell>
+                        <TableCell> Transcript</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {stories.map((story) => {
-                        <TableCell component="th" scope="row">
-                            {story.id}
-                        </TableCell>
+                        return(
+                            <TableRow key={ story.id }>
+                            <TableCell>{story.uploaded_at}</TableCell>
+                            <TableCell>{story.id}</TableCell>
+                            <TableCell>{story.transcript}</TableCell>
+                            <TableCell>See more</TableCell>
+                        </TableRow>
+                        )
                     })}
                 </TableBody>
             </Table>
         </TableContainer>
+        </div>
     )
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
+import Summary from "./Summary";
 
 const useStyles = makeStyles({
    root: {
@@ -9,7 +10,12 @@ const useStyles = makeStyles({
 
 function Welcome() {
    const classes = useStyles();
-   return <h1 className={ classes.root }>Welcome! (Therapist)</h1>
+   return (
+      <div className={ classes.root }>
+         <h1>Welcome! (Therapist)</h1>
+         <Summary/>
+      </div>
+   ) 
 }
 
 export default Welcome;
