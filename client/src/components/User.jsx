@@ -10,7 +10,6 @@ function User() {
             setUsers([ ...users, item.data() ])
         })
     }
-    
     useEffect(() => {
         fetchUsers();
     }, []);

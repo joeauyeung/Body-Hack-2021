@@ -7,7 +7,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import { BiBookAlt, BiLogOut } from "react-icons/bi";
 import { RiDashboardLine } from "react-icons/ri";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
@@ -33,12 +33,12 @@ export default function NavDrawer(props) {
 
     const navItems = [
         {
-            text: "Public Stories",
+            text: "Home",
             icon: <BiBookAlt/>,
             link: "/"
         },
         {
-            text: "Dashboard",
+            text: "Users",
             icon: <RiDashboardLine/>,
             link: "/users"
         },

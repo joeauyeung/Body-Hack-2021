@@ -17,10 +17,10 @@ const theme  = createMuiTheme({
     }
 })
 
-function App() {
 
-    return(
-        <ThemeProvider theme={ theme }>
+function App() {
+    return (
+    <ThemeProvider theme={ theme }>
         <Router>    
         <Navbar/>
             <Switch>
@@ -29,8 +29,9 @@ function App() {
             </Switch>
         </Router>
 
-        </ThemeProvider>
-        );
+    </ThemeProvider>
+
+    )
 }
 
 export default App;

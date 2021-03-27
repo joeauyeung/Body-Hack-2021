@@ -1,7 +1,15 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+   root: {
+      marginTop: "100px"
+   }
+})
 
 function Welcome() {
-   return <h1>Welcome!</h1>
+   const classes = useStyles();
+   return <h1 className={ classes.root }>Welcome!</h1>
 }
 
 export default Welcome;
